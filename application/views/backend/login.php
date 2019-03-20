@@ -32,8 +32,8 @@
                                     <span class="input-group-text bg-warning text-white" id="basic-addon2"><i
                                                 class="ti-pencil"></i></span>
                         </div>
-                        <input type="password" name="passwd" class="form-control form-control-lg" placeholder="Parola"
-                               aria-label="Parola" aria-describedby="basic-addon1" required="">
+                        <input type="password" name="passwd" class="form-control form-control-lg" placeholder="Password"
+                               aria-label="Password" aria-describedby="basic-addon1" required="">
                     </div>
 
                 </div>
