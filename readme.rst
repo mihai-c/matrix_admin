@@ -40,10 +40,12 @@ Installation
 ************
 
 Please see the `installation section <https://codeigniter.com/user_guide/installation/index.html>`_
-of the CodeIgniter User Guide._
+of the CodeIgniter User Guide.\
 The Matrix Admin Template is tested on Codeigniter 3.1.10
+
 After copying the files to your server, don't forget to enter your database credential and visit the
 welcome page (domain.com/welcome) for creating the admin_users table and inserting the info.
+
 For login, after visiting the welcome page, use these credentials: test@test.com -> admin1234
 
 *******
