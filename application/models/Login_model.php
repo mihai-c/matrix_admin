@@ -35,14 +35,14 @@
 				} else {
 					$return = array(
 						'error' => TRUE,
-						'msg'   => 'Parola introdusa nu este corecta!'
+						'msg'   => 'Incorrect password!'
 					);
 					return $return;
 				}
 			}else{
 				$return = array(
 					'error' => TRUE,
-					'msg'   => 'Nu exista niciun cont asociat aceastei adrese de email!'
+					'msg'   => 'There is no account associated with this email!'
 				);
 				return $return;
 			}

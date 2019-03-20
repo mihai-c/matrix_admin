@@ -34,7 +34,7 @@
 		public function index()
 		{
 			$this->data   = array(
-				"page_title"    => "Imob Admin Panel",
+				"page_title"    => "Login Matrix Admin Dashboard",
 				"header"        => FALSE,
 				"main_content"  => strtolower(get_class()),
 				"custom_js"     => array("login.js")
@@ -50,15 +50,8 @@
 			$this->load->library("form_validation");
 			$this->form_validation->set_error_delimiters("", "");
 
-			$this->form_validation->set_rules('email', 'E-mail','trim|required|min_length[3]|max_length[150]|valid_email',
-				array('required'=>'%s este un camp obligatoriu!',
-					'min_length'=>'Campul %s trebuie sa contina minim %s caractere!',
-					'max_length'=>'Campul %s trebuie sa contina maxim %s caractere!',
-					'valid_email'=>'Campul %s trebuie sa fie un e-mail valid!'));
-			$this->form_validation->set_rules('passwd', 'Parola','trim|required|min_length[6]|max_length[250]',
-				array('required'=>'%s este un camp obligatoriu!',
-					'min_length'=>'Campul %s trebuie sa contina minim %s caractere!',
-					'max_length'=>'Campul %s trebuie sa contina maxim %s caractere!'));
+			$this->form_validation->set_rules('email', 'E-mail','trim|required|min_length[3]|max_length[150]|valid_email');
+			$this->form_validation->set_rules('passwd', 'Parola','trim|required|min_length[6]|max_length[250]');
 
 			if ($this->form_validation->run() == FALSE) {
 				$this->index();
@@ -77,8 +70,8 @@
 						'name' 		    => $verify['user']->name,
 						'is_user_login' => TRUE,
 						'user_id'	 	=> $verify['user']->id,
-						'lastlogin' 	=> $validation['user']->last_login,
-						'user_type' 	=> $validation['user']->user_type,
+						'lastlogin' 	=> $verify['user']->last_login,
+						'user_type' 	=> $verify['user']->user_type,
 					));
 					$this->session->set_userdata($session);
 
